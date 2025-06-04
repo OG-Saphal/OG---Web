@@ -53,7 +53,7 @@ showSlide(0);
 document.addEventListener('DOMContentLoaded', function () {
   if (typeof AOS !== 'undefined') {
     AOS.init({
-      duration: 800,
+      duration: 200,
       once: true
     });
   }
@@ -92,6 +92,13 @@ document.addEventListener('DOMContentLoaded', function () {
     breakpoints: { 640: { slidesPerView: 2.2 }, 1024: { slidesPerView: 3.2 } }
   });
 
+  new Swiper('.special-swiper', {
+    slidesPerView: 1.2,
+    spaceBetween: 20,
+    navigation: { nextEl: '.other-swiper .swiper-button-next', prevEl: '.other-swiper .swiper-button-prev' },
+    breakpoints: { 640: { slidesPerView: 2.2 }, 1024: { slidesPerView: 3.2 } }
+  });
+  
   // Show full gallery on button click
   // Gallery expand/collapse
   const viewBtn = document.getElementById('viewFullGalleryBtn');
